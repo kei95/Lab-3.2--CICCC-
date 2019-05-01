@@ -41,8 +41,12 @@ public class Calculator {
     /**
      * Divide operation
      */
-    public double div(double firstOperand, double secondOperand) {
+    public double div(double firstOperand, double secondOperand) throws IllegalArgumentException {
+        if(secondOperand == 0){
+            throw new IllegalArgumentException("Zero Division is not arrowed");
+        }
         return firstOperand / secondOperand;
+
     }
 
     /**
